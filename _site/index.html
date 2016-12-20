@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>GitHub_Pages_-Study- by Muchun-Yen</title>
+    <link rel="stylesheet" href="/assets/css/style.css?v=68a66aa574cf13ceac04d69646e4f951727fdcc2">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="http://github.com/Muchun-Yen/GitHub_Pages_-Study-">View On GitHub</a></li>
+          
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>GitHub_Pages_-Study-</h1>
+          <p>學習如何使用Github Pages功能去讓靜態網頁呈現在[User_Name].github.io.[Project Page's Name]</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="http://github.com/Muchun-Yen">Muchun-Yen</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1 id="github-pagesweb-page">利用GitHub Pages來放置Web Page</h1>
+
+<h2 id="step1-project-site-reposity-githubpages-study-"><strong>Step1 建立此project site reposity 名稱為[GitHub_Pages_-Study-]</strong></h2>
+<p>這裡有個地方要留意，明明我本來的命名是GitHub_Pages_[Study]
+系統在Reposity建立的時候，自行的將<strong>[</strong> 與 <strong>]</strong>字元變成了<strong>-</strong></p>
+
+<h3 id="section">這個原因…先擱置(╯-_-)╯ ~╩╩</h3>
+
+<h2 id="step2-githubpages-study--settinggithub-pages"><strong>Step2 進入GitHub_Pages_-Study- 的Setting頁面找到GitHub Pages選項。</strong></h2>
+<p>按下Theme chooser選項裡的Choose a theme按鈕。選擇<strong>Midnight theme</strong>…原因是我個人喜歡這款。
+GitHub會自動帶出GitHub_Pages_-Study-/index.md的編輯頁。
+我們不修改任何文字，只在下方的Commit changes選項的Update欄位填入 <strong>the original version commit</strong> …內容是描述你這次commit是為何。
+選擇Create a new branch for this commit and start a pull request.我們要新增名稱為<strong>gh-pages</strong>的branch
+因為GitHub pages雖然可以使用master為branch,但是建議還是使用gh-pages。原因來自Jekyll 網頁中提到的Project pages通常是使用gh-pages來作為branch，
+或者是使用master branch 而去搭配使用/doc這個folder。
+<a href="https://jekyllrb.com/docs/github-pages/">https://jekyllrb.com/docs/github-pages/</a></p>
+
+<h3 id="section-1">背後的原因…先擱置(╯-_-)╯ ~╩╩ ]。先當個照本宣科的門外漢先！</h3>
+
+<p>完成之後將會看到一個新的branch；名為gh-pages被建立。
+然後我們在進入到Reposity的Setting頁面在左邊的選單中選擇Branch選項我們要將Default Branch改為gh-pages。
+在Default branch的選項的下拉式選單裡面選到gh-pages之後然後按下在它旁邊的Update button。就完成Default branch的設定了。
+然後我們在Setting 裡面GitHub Pages選項也要將Source 由master branch改為gh-pages branch後按下在它旁邊的Save button
+我們可以在網頁中開啟GitHub Page所建立的這個Project Page網頁。<strong>https://muchun-yen.github.io/GitHub_Pages_-Study-/</strong></p>
+
+<p>然後我們就可在本機端利用<strong>git clone https://github.com/Muchun-Yen/GitHub_Pages_-Study-.git</strong> 去fork這個reposity了。</p>
+
+<h2 id="step3-test-in-the-local-machine-">**Step3 Test in the local machine **</h2>
+
+<p>在本地端機器下載這個Project page的reposity後我們可以看到幾個重點
+1. _config.yml 這是用來儲存Jekyll的一些configuration data。
+	裡面只有一行 <strong>theme: jekyll-theme-midnight</strong> 告知使用的Jekyll theme 是midnight
+2. index.md 這個是makedown形式的網頁本體。我們要自行修改。
+3. 我們要自己建立README.md
+4. 我們應該要可以在本地端以Jekyll來查看我們的網頁設計</p>
+
+<p>我們直接來看在本地端以Jekyll來查看我們的網頁設計</p>
+
+<p>我的另外一篇Jekyll安裝是設定在Ubuntu 14.04LTS上面安裝。請依照步驟完成Jekyll的環境設定。
+再來是我們要在目前的git clone下來的folder裡面新增加一個檔案-<strong>Gemfile</strong>
+裡面的內容為 gem ‘github-pages’, group: :jekyll_plugins</p>
+
+<p>然後我們執行</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll server
+</code></pre>
+</div>
+
+<p>我們就可以在本機端的瀏覽器localhost:4000上面看到index.md的內容了。</p>
+
+
+      </section>
+
+    </div>
+
+    
+  </body>
+</html>
